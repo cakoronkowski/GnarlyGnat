@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<BorderPane fx:id="parentBorderPane" prefHeight="400" prefWidth="800" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="controllers.ClientController">
+    <left>
+        <TreeView fx:id="navTreeView" layoutX="0" layoutY="0">
+
+        </TreeView>
+    </left>
+    <!--<top>-->
+
+        <!--&lt;!&ndash;<ToolBar fx:id="topToolBar">&ndash;&gt;-->
+            <!--&lt;!&ndash;<items>&ndash;&gt;-->
+                <!--&lt;!&ndash;<Button fx:id="downloadTorrentBtn" text="Download Torrent"></Button>&ndash;&gt;-->
+                <!--&lt;!&ndash;<Button fx:id="addNewTorrentBtn" text="Add New Torrent"></Button>&ndash;&gt;-->
+                <!--&lt;!&ndash;<Button fx:id="changeDefaultTracker" text="Change Default Tracker"></Button>&ndash;&gt;-->
+                <!--&lt;!&ndash;<Button fx:id="changeDefaultRepo" text="Change Default Repo"></Button>&ndash;&gt;-->
+                <!--&lt;!&ndash;<Button fx:id="changeDefaultDown" text="Change Default Download Location"></Button>&ndash;&gt;-->
+            <!--&lt;!&ndash;</items>&ndash;&gt;-->
+        <!--&lt;!&ndash;</ToolBar>&ndash;&gt;-->
+    <!--</top>-->
+    <center>
+        <FlowPane fx:id="centerFlowPane">
+
+        </FlowPane>
+    </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="downTorrentMenuItem" mnemonicParsing="false" text="Download Torrent" />
+                  <MenuItem fx:id="registerTorrentMenuItem" mnemonicParsing="false" text="Register Torrent" />
+                  <MenuItem fx:id="preferencesMenuItem" mnemonicParsing="false" text="Preferences" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="View">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

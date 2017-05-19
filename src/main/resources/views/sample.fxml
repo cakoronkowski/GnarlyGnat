@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<?import javafx.scene.text.Text?>
+<FlowPane prefHeight="300.0" prefWidth="200.0" alignment="CENTER" orientation="VERTICAL" xmlns:fx="http://javafx.com/fxml">
+    <children>
+        <FlowPane alignment="CENTER">
+        <Text id="welcomeText" style="-fx-font-size: 20px" text="Welcome to GnarlyGnat" textAlignment="RIGHT" ></Text>
+        </FlowPane>
+        <FlowPane alignment="CENTER" prefHeight="300.0" prefWidth="800.0" hgap="15" >
+
+            <children>
+                <Button id="clientBtn" text="Client" ></Button>
+                <Button id="trackerBtn" text="workers.Tracker" ></Button>
+                <Button id="repositoryBtn" text="Repository"></Button>
+
+
+            </children>
+        </FlowPane>
+
+
+    </children>
+</FlowPane>

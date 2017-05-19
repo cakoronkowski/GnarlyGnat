@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create - data.RepoTorrentFile</title>
+     <link rel="stylesheet" href="/bootstrap.min.css">
+     <link rel="stylesheet" href="/main.css">
+     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script src="/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">GnarlyGnat</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li ><a href="/">Home </a></li>
+
+#if( $torrentId == "0" )
+ <li class="active"><a  href="/torrents/0/edit">New Torrent</a></li>
+#else
+	<li><a href="/torrents/0/edit">New Torrent</a></li>
+#end
+
+
+        
+      </ul>
+      <form class="navbar-form navbar-right" method="POST" action="/search">
+        <div class="form-group">
+          <input type="text" name="searchText" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="row">
+
+#if( $torrentId == "0" )
+  <h1>Create New Torrent File</h1>
+#else
+	 <h1>Edit Torrent File</h1>
+#end
+
+	
+</div>
+
+<div class="row">
+
+<div class="well">
+
+<form method="POST" action="/torrents/$torrentId/edit">
+
+<div class="form-group">
+    <label for="fileName">File Name</label>
+    <input type="text" class="form-control" name="FileName" value="$!torrent.FileName" id="fileName" placeholder="Enter File Name">
+  </div>
+
+<div class="form-group">
+    <label for="fileSize">File Size</label>
+    <input type="number" class="form-control" name="FileSize" value="$!torrent.FileSize" id="fileSize" placeholder="Enter File Size">
+  </div>
+
+  <div class="form-group">
+    <label for="fileName">Chunk Size</label>
+    <input type="number" class="form-control" name="ChunkSize" value="$!torrent.ChunkSize" id="chunkSize" placeholder="Enter Chunk Size">
+  </div>
+<input type="hidden" name="TorrentId" value="$!torrent.TorrentId">
+
+#if( $torrentId == "0" )
+   <button type="submit" class="btn btn-default">Create</button>
+#else
+	<button type="submit" class="btn btn-default">Save</button>
+#end
+
+
+</form>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>

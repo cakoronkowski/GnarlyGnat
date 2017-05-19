@@ -1,0 +1,62 @@
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff:
+# .idea/workspace.xml
+# .idea/tasks.xml
+# .idea/dictionaries
+# .idea/vcs.xml
+# .idea/jsLibraryMappings.xml
+
+# Sensitive or high-churn files:
+# .idea/dataSources.ids
+# .idea/dataSources.xml
+# .idea/dataSources.local.xml
+# .idea/sqlDataSources.xml
+# .idea/dynamic.xml
+# .idea/uiDesigner.xml
+
+# Gradle:
+# .idea/gradle.xml
+# .idea/libraries
+
+# Mongo Explorer plugin:
+# .idea/mongoSettings.xml
+.idea/
+## File-based project format:
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+NattyNarwhal/.idea/workspace.xml
+NattyNarwhal/.idea/__workspace.xml
+NattyNarwhal/out/
+NattyNarwhal/NatConfig.txt
+
+GnarlyGnat/.idea/workspace.xml
+GnarlyGnat/.idea/__workspace.xml
+GnarlyGnat/out/
+
+GnarlyGnat/build/
+GnarlyGnat/.idea/uiDesigner.xml
+GnarlyGnat/src/main/resources/META-INF/MANIFEST.MF
+GnarlyGnat/jars/gnarly-gnat_main.jar
+*.DS_Store
+GnarlyGnat/envdata/
+GnarlyGnat/syncTestLog.txt
+GnarlyGnat/gnarly-gnat-ant.properties
+GnarlyGnat/gnarly-gnat-ant.xml

@@ -1,0 +1,78 @@
+group 'com.spsu4eva.app'
+version '1.0'
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+
+    //Database
+    compile 'org.jetbrains.xodus:xodus-entity-store:1.0.2'
+    compile 'org.jetbrains.xodus:xodus-environment:1.0.2'
+
+    // for WebServer
+    compile "com.sparkjava:spark-core:2.5"
+    compile group: 'com.sparkjava', name: 'spark-template-velocity', version: '2.3'
+
+    //for JSON API
+    compile 'com.google.guava:guava:20.0'
+    compile 'com.google.code.gson:gson:2.8.0'
+// https://mvnrepository.com/artifact/org.asynchttpclient/async-http-client
+    compile group: 'org.asynchttpclient', name: 'async-http-client', version: '2.0.24'
+
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.8.5'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.5'
+    compile group: 'com.fasterxml.jackson.module', name: 'jackson-modules-java8', version: '2.8.5'
+    compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jdk8', version: '2.8.5'
+    compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-parameter-names', version: '2.8.5'
+    compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.8.5'
+
+
+
+    compileOnly "org.projectlombok:lombok:1.16.10"
+
+
+}
+
+buildscript {
+    dependencies {
+        classpath group: 'de.dynamicfiles.projects.gradle.plugins', name: 'javafx-gradle-plugin', version: '8.7.0'
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'javafx-gradle-plugin'
+
+
+jfx {
+    // minimal requirement for jfxJar-task
+    mainClass = 'ManagerGui'
+
+    // minimal requirement for jfxNative-task
+    vendor = 'Stephen Strickland'
+}
+//group 'com.spsu4eva.app'
+//version '1.0'
+//
+//apply plugin: 'java'
+//
+//sourceCompatibility = 1.8
+//
+//repositories {
+//    mavenCentral()
+//}
+//
+//dependencies {
+//    testCompile group: 'junit', name: 'junit', version: '4.11'
+//    compile "com.sparkjava:spark-core:2.5"
+//}

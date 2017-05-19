@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<TabPane minHeight="200" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ClientTorrentDetailController">
+  <tabs>
+    <Tab fx:id="infoTab" text="Info">
+      <content>
+        <AnchorPane fx:id="parentPane" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox fx:id="parentVbox" prefHeight="185.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Progress">
+                           <VBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </VBox.margin>
+                        </Text>
+                        <ProgressBar fx:id="progressBar" progress="0.0" style="-fx-border-width: 2; -fx-border-color: #00bc8c;">
+                           <padding>
+                              <Insets left="10.0" top="10.0" />
+                           </padding></ProgressBar>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Chunk Status">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="10.0" top="5.0" />
+                           </VBox.margin>
+                        </Text>
+                        <FlowPane fx:id="chunkHBox" hgap="-.5" prefHeight="42.0" prefWidth="600" vgap="5" style="-fx-border-width: 2; -fx-border-color: #007f5e;">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding></FlowPane>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="File Name: " />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="File Size: " />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Create Date:" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="File Location:" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="78.0" prefWidth="422.0" spacing="5.0">
+                                 <children>
+                                    <Text fx:id="fileNameText" strokeType="OUTSIDE" strokeWidth="0.0" text="SomeFile.txt" />
+                                    <Text fx:id="fileSizeText" strokeType="OUTSIDE" strokeWidth="0.0" text="24.4 Gb" />
+                                    <Text fx:id="createDateText" strokeType="OUTSIDE" strokeWidth="0.0" text="10/12/2016 3:45 AM" />
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Text fx:id="fileLocationText" strokeType="OUTSIDE" strokeWidth="0.0" text="C:/folder/cool/SomeFile.txt" />
+                                          <Button fx:id="changeFileLocationBtn" mnemonicParsing="false" onAction="#changeLocation" prefHeight="26.0" prefWidth="189.0" text="Select Location" visible="false">
+                                             <HBox.margin>
+                                                <Insets left="10.0" top="-5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab fx:id="peersTab" text="Peers">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <HBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView fx:id="peersTableView" HBox.hgrow="ALWAYS">
+                        </TableView>
+                     </children>
+                  </HBox>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

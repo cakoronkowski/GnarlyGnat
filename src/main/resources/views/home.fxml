@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<?import javafx.scene.text.Text?>
+<FlowPane fx:id="parentFlowPane"  fx:controller="controllers.HomeController" xmlns:fx="http://javafx.com/fxml">
+    <children>
+        <Button fx:id="refreshBtn" text="Refresh Graphs"></Button>
+        <VBox fx:id="overallVbox">
+
+        </VBox>
+        <VBox fx:id="torrentVBox">
+            <ChoiceBox fx:id="torrentChoiceBox"></ChoiceBox>
+
+        </VBox>
+    </children>
+</FlowPane>

@@ -1,0 +1,6 @@
+C:\Users\Angel\Documents\nattynarwhal\GnarlyGnat\Installer\Installer\Installer\bin\Debug\Installer.exe.config
+C:\Users\Angel\Documents\nattynarwhal\GnarlyGnat\Installer\Installer\Installer\bin\Debug\Installer.exe
+C:\Users\Angel\Documents\nattynarwhal\GnarlyGnat\Installer\Installer\Installer\bin\Debug\Installer.pdb
+C:\Users\Angel\Documents\nattynarwhal\GnarlyGnat\Installer\Installer\Installer\obj\Debug\Installer.csprojResolveAssemblyReference.cache
+C:\Users\Angel\Documents\nattynarwhal\GnarlyGnat\Installer\Installer\Installer\obj\Debug\Installer.exe
+C:\Users\Angel\Documents\nattynarwhal\GnarlyGnat\Installer\Installer\Installer\obj\Debug\Installer.pdb
